@@ -27,6 +27,10 @@ class ExampleFactory2 implements AbstractFactory {
 interface AbstractProductA {
     usefulFunctionA(): string;
 }
+interface AbstractProductB {
+    usefulFunctionB(): string;
+    anotherUsefulFunctionB(collaborator: AbstractProductA): string;
+}
 
 class ExampleProductA1 implements AbstractProductA {
     public usefulFunctionA(): string {
@@ -40,10 +44,7 @@ class ExampleProductA2 implements AbstractProductA {
     }
 }
 
-interface AbstractProductB {
-    usefulFunctionB(): string;
-    anotherUsefulFunctionB(collaborator: AbstractProductA): string;
-}
+
 
 class ExampleProductB1 implements AbstractProductB {
     public usefulFunctionB(): string {
@@ -51,7 +52,7 @@ class ExampleProductB1 implements AbstractProductB {
     }
 
     public anotherUsefulFunctionB(collaborator: AbstractProductA): string {
-        const result = collaborator.usefulFunctionA;
+        const result = collaborator.usefulFunctionA();
         return 'result of product B-1 with collaborate' + result
 
     }

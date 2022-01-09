@@ -1,4 +1,3 @@
-
 interface CarFactory {
     createSedan(): Sedan;
     createCoupe(): Coupe;
@@ -24,36 +23,46 @@ class FordFactory implements CarFactory {
     }
 }
 
-interface Sedan {}
-interface Coupe {}
+interface Sedan {
+    create(): string;
+}
+interface Coupe {
+    create(): string;
+}
 
 class ToyotaCoupe implements Coupe {
-    public ToyotaCoupe() {
-        console.log('create Toyota coupe');
+    public create(): string {
+        return 'create Toyota coupe';
     }
 }
 
 class ToyotaSedan implements Sedan {
-    public ToyotaSedan() {
-        console.log('create Toyota sedan');
+    public create(): string {
+        return 'create Toyota sedan';
     }
 }
 
 class FordCoupe implements Coupe {
-    public FordCoupe() {
-        console.log('create Ford coupe');
+    public create(): string {
+        return 'create Ford coupe';
     }
 }
 
 class FordSedan implements Sedan {
-    public FordSedan() {
-        console.log('create Ford sedan');
+    public create(): string {
+        return 'create Ford sedan';
     }
 }
 
-const factory1 = new ToyotaFactory();
-console.log('factory 1');
-factory1.createSedan();
-const factory2 = new ToyotaFactory();
-console.log('factory 2');
-factory2.createCoupe();
+function clientCode(factory: CarFactory) {
+    const sedan = factory.createSedan();
+    const coupe = factory.createCoupe();
+
+    console.log(sedan.create());
+    console.log(coupe.create());
+}
+
+console.log('toyota');
+clientCode(new ToyotaFactory());
+console.log('ford');
+clientCode(new FordFactory());
