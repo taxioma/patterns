@@ -1,4 +1,4 @@
-// Singleton
+// Singleton, Одиночка
 
 class Singleton {
     private static instance:Singleton;

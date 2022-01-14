@@ -1,4 +1,4 @@
-// Wrapper, Обёртка, Adapter
+// Wrapper, Обёртка, Adapter, Адаптер
 
 class Target {
     public request(): string {

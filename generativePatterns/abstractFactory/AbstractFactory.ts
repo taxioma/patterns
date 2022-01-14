@@ -1,4 +1,4 @@
-// Abstract Factory
+// Abstract Factory, Абстрактная Фабрика
 
 interface CarFactory {
     createSedan(): Sedan;

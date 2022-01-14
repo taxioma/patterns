@@ -1,4 +1,4 @@
-// Bridge
+// Bridge, Мост
 
 class Abstraction {
     protected implementation: Implementation;

@@ -1,4 +1,4 @@
-// Builder
+// Builder, Строитель
 
 interface Builder {
     producePartA(): void;

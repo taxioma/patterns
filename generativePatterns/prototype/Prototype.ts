@@ -1,4 +1,4 @@
-// Клон, Prototype
+// Клон, Prototype, Прототип
 
 class Prototype {
     public primitive: any;
