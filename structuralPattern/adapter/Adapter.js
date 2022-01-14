@@ -37,7 +37,7 @@ var Adapter = /** @class */ (function (_super) {
         return _this;
     }
     Adapter.prototype.request = function () {
-        var result = this.adaptee.specificRequest().split('').reverse().join();
+        var result = this.adaptee.specificRequest().split('').reverse().join('');
         return 'Adapter: [translated]' + result;
     };
     return Adapter;
