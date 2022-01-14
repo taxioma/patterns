@@ -1,3 +1,5 @@
+// Виртуальный конструктор, Factory Method
+
 abstract class Creator {
     public abstract factoryMethod(): Product;
 

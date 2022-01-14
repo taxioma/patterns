@@ -1,3 +1,5 @@
+// Клон, Prototype
+
 class Prototype {
     public primitive: any;
     public component: object;

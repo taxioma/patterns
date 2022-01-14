@@ -1,3 +1,5 @@
+// Singleton
+
 class Singleton {
     private static instance:Singleton;
 

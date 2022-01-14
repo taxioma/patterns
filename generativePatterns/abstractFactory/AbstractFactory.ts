@@ -1,3 +1,5 @@
+// Abstract Factory
+
 interface CarFactory {
     createSedan(): Sedan;
     createCoupe(): Coupe;
